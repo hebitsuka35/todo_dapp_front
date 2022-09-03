@@ -12,7 +12,7 @@ class TodoListModel extends ChangeNotifier {
   List<Task> todos = [];
   bool isLoading = true;
   int? taskCount;
-  final String _rpcUrl = "http://127.0.0.1:7545";
+  final String _rpcUrl = "http://10.0.2.2:7545";
   final String _wsUrl = "ws://127.0.0.1:7545/";
 
   //自分のPRIVATE_KEYを追加してください。
@@ -166,8 +166,6 @@ class TodoListModel extends ChangeNotifier {
   }
 }
 
-//TodoListModel.dart
-//to-doのリストを格納するモデルクラス
 class Task {
   final int? id;
   final String? taskName;
