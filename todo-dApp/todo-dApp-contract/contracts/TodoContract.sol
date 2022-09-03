@@ -21,7 +21,6 @@ contract TodoContract {
     //4.to-doを削除する機能
     event TaskDeleted(uint256 taskNumber);
 
-    // TodoContract.sol
     function createTask(string memory _taskName) public {
         todos[taskCount] = Task(taskCount, _taskName, false);
         taskCount++;

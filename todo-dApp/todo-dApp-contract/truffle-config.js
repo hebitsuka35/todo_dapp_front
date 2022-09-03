@@ -4,14 +4,16 @@ require("dotenv").config();
 const fs = require("fs");
 const mnemonic = fs.readFileSync(".secret").toString().trim();
 
-var ALCHEMY_API_KEY = "YOU-ALCHEMY_API_KEY-FOR-POLYGON";
+// var ALCHEMY_API_KEY = "A9LzTxxt0riT3vsSTBDNznCq_TxKanLo";
+
+var ALCHEMY_API_KEY = "YOU-ALCHEMY_API_KEY--POLYGON";
 
 module.exports = {
   networks: {
     development: {
       host: "localhost",
       port: 7545,
-      network_id: "*",
+      network_id: "5777",
     },
     matic: {
       provider: () =>
@@ -50,7 +52,7 @@ module.exports = {
 //     development: {
 //       host: "localhost",
 //       port: 7545,
-//       network_id: "*",
+//       network_id: "5777",
 //     },
 //   },
 //   contracts_directory: "./contracts",
