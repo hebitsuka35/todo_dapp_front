@@ -1,10 +1,10 @@
 import sdk from "./1-initialize-sdk.js";
 
 // ERC-1155 メンバーシップの NFT コントラクトアドレス
-const editionDrop = sdk.getContract("0x6F8816B8979877801b64A4342E9477833e9224F9", "edition-drop");
+const editionDrop = sdk.getContract("0x0b7C76DBaEAc6D46ECDA7bFEaA0f11bCb88e86aB", "edition-drop");
 
 // ERC-20 トークンコントラクトのアドレス
-const token = sdk.getContract("0x5A38aEDD0A024673E3A6678bf25B13F76B4aaD6b", "token");
+const token = sdk.getContract("0x9f97394D3DAec9E4622dd3fA501d0C80416142bb", "token");
 
 (async () => {
   try {

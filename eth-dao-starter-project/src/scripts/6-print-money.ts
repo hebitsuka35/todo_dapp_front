@@ -1,19 +1,23 @@
 import sdk from "./1-initialize-sdk.js";
 
-const token = sdk.getContract("0x5A38aEDD0A024673E3A6678bf25B13F76B4aaD6b","token");
+// これは、前のステップで取得した私たちの ERC-20 コントラクトのアドレスです。
+const token = sdk.getContract("0x9f97394D3DAec9E4622dd3fA501d0C80416142bb", "token");
 
-(async()=>{
-    try{
-        const amount = 1000000;
-        await(await token).mint(amount);
-        const totalSupply = await(await token).totalSupply();
+(async () => {
+  try {
+    // // 設定したい最大供給量を設定
+    const amount = 1000000;
+    // デプロイされた ERC-20 コントラクトを通して、トークンをミント
+    await (await token).mint(amount);
+    const totalSupply = await (await token).totalSupply();
 
-        console.log(
-            "There now is",
-            totalSupply.displayValue,
-            "$TSC in circulation"
-        );
-    }catch(error){
-        console.error("Failed to print money",error);
-    }
+    // 今、私たちのトークンがどれだけあるかを表示
+    console.log(
+      "✅ There now is",
+      totalSupply.displayValue,
+      "$TSC in circulation"
+    );
+  } catch (error) {
+    console.error("Failed to print money", error);
+  }
 })();

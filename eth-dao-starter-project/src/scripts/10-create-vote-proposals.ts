@@ -2,10 +2,10 @@ import sdk from "./1-initialize-sdk.js";
 import { ethers } from "ethers";
 
 // 投票コントラクトのアドレスを設定します
-const vote = sdk.getContract("0x391da075D0147F990030dD99c094006686691A09", "vote");
+const vote = sdk.getContract("0xbaE5b2dfD6914a9f35902E09ee2B44bdc9be609D", "vote");
 
 // ERC-20 コントラクトのアドレスを設定します。
-const token = sdk.getContract("0x5A38aEDD0A024673E3A6678bf25B13F76B4aaD6b", "token");
+const token = sdk.getContract("0x9f97394D3DAec9E4622dd3fA501d0C80416142bb", "token");
 
 
 (async () => {
